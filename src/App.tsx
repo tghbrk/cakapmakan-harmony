@@ -3,8 +3,8 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { ClerkLoaded, ClerkLoading, SignIn, SignUp } from "@clerk/clerk-react";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { ClerkLoaded, ClerkLoading, SignIn, SignUp, SignedIn, SignedOut } from "@clerk/clerk-react";
 import Index from "./pages/Index";
 import Auth from "./pages/Auth";
 import NotFound from "./pages/NotFound";
@@ -29,10 +29,25 @@ const App = () => (
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/auth" element={<Auth />} />
+            
+            {/* Clerk Auth Routes */}
             <Route path="/sign-in/*" element={<SignIn routing="path" path="/sign-in" />} />
             <Route path="/sign-up/*" element={<SignUp routing="path" path="/sign-up" />} />
-            <Route path="/consumer" element={<ConsumerHome />} />
-            <Route path="/restaurant" element={<RestaurantDashboard />} />
+            
+            {/* Protected Routes */}
+            <Route 
+              path="/consumer" 
+              element={
+                <ConsumerHome />
+              } 
+            />
+            <Route 
+              path="/restaurant" 
+              element={
+                <RestaurantDashboard />
+              } 
+            />
+            
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

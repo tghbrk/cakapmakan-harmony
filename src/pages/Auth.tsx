@@ -42,10 +42,10 @@ const Auth: React.FC = () => {
                 <TabsTrigger value="signup">Sign Up</TabsTrigger>
               </TabsList>
               <TabsContent value="signin">
-                <SignIn routing="path" path="/sign-in" signUpUrl="/sign-up" />
+                <SignIn />
               </TabsContent>
               <TabsContent value="signup">
-                <SignUp routing="path" path="/sign-up" signInUrl="/sign-in" />
+                <SignUp />
               </TabsContent>
             </Tabs>
           </CardContent>
