@@ -17,9 +17,9 @@ const HomeScreen: React.FC = () => {
       rating: 4.7,
       distance: '1.2 km',
       prices: [
-        { platform: 'grab', price: 12.90, deliveryFee: 3.00, estimatedTime: '25-30 min' },
-        { platform: 'shopee', price: 11.50, deliveryFee: 5.00, estimatedTime: '30-40 min' },
-        { platform: 'foodpanda', price: 12.50, deliveryFee: 2.50, estimatedTime: '20-30 min' }
+        { platform: 'grab' as const, price: 12.90, deliveryFee: 3.00, estimatedTime: '25-30 min' },
+        { platform: 'shopee' as const, price: 11.50, deliveryFee: 5.00, estimatedTime: '30-40 min' },
+        { platform: 'foodpanda' as const, price: 12.50, deliveryFee: 2.50, estimatedTime: '20-30 min' }
       ]
     },
     {
@@ -30,8 +30,8 @@ const HomeScreen: React.FC = () => {
       rating: 4.5,
       distance: '0.8 km',
       prices: [
-        { platform: 'grab', price: 15.90, deliveryFee: 2.50, estimatedTime: '15-25 min' },
-        { platform: 'foodpanda', price: 16.00, deliveryFee: 2.00, estimatedTime: '20-30 min' }
+        { platform: 'grab' as const, price: 15.90, deliveryFee: 2.50, estimatedTime: '15-25 min' },
+        { platform: 'foodpanda' as const, price: 16.00, deliveryFee: 2.00, estimatedTime: '20-30 min' }
       ]
     },
     {
@@ -42,9 +42,9 @@ const HomeScreen: React.FC = () => {
       rating: 4.8,
       distance: '2.5 km',
       prices: [
-        { platform: 'grab', price: 25.90, deliveryFee: 4.00, estimatedTime: '25-35 min' },
-        { platform: 'shopee', price: 24.50, deliveryFee: 5.50, originalPrice: 28.50, estimatedTime: '35-45 min' },
-        { platform: 'foodpanda', price: 26.50, deliveryFee: 3.50, estimatedTime: '30-40 min' }
+        { platform: 'grab' as const, price: 25.90, deliveryFee: 4.00, estimatedTime: '25-35 min' },
+        { platform: 'shopee' as const, price: 24.50, deliveryFee: 5.50, originalPrice: 28.50, estimatedTime: '35-45 min' },
+        { platform: 'foodpanda' as const, price: 26.50, deliveryFee: 3.50, estimatedTime: '30-40 min' }
       ]
     }
   ];
